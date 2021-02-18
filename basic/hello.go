@@ -10,6 +10,6 @@ import "fmt"
 // It is an entrypoint of application
 func main() {
 
-	//Println function of the fmt package is used to write text to the standard output
+	// Println function of the fmt package is used to write text to the standard output
 	fmt.Println("👋🌏 \nHello World!")
 }
