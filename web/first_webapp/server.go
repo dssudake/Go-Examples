@@ -20,8 +20,9 @@ import (
 	 http.Request struct - contains all information about this HTTP request including things like URL or header fields
 */
 func handler(writer http.ResponseWriter, request *http.Request) {
-	fmt.Println(writer)
-	fmt.Fprintf(writer, "Hello, you've requested : %s\n", request.URL.Path)
+	// Setting the Content-Type header
+	writer.Header().Set("Content-Type", "text/html")
+	fmt.Fprintf(writer, "<h1>Hello, you've requested : %s</h1>", request.URL.Path)
 }
 
 func main() {
